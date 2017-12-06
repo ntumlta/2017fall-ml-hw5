@@ -9,42 +9,46 @@
 <title>Machine Learning HW4 (2017, Fall)</title>
 
 <xmp theme="cerulean" style="display:none;">
-# Assignment #4 Text Sentiment Classification
+# Assignment #5 Movie Recommendation
 
 <hr>
 ### Announcement
 
-* Kaggle Deadline: 2017/12/7 11:59 P.M. (GMT+8)
-* Github Deadline: 2017/12/8 11:59 P.M. (GMT+8)
-* TA會於11/30釋出範例程式碼，亦為超過 Kaggle simple baseline 的加分截止期限
+* Kaggle Deadline: 2017/12/21 23:59 P.M. (GMT+8)
+* Github Deadline: 2017/12/22 23:59 P.M. (GMT+8)
+* TA會於12/14釋出範例程式碼，亦為超過 Kaggle simple baseline 的加分截止期限
 
 <hr>
 ### Link
-* 投影片連結 <a href="https://docs.google.com/presentation/d/1HnyZowEamy8N4cUT0gY4aoRZuBTluIuoe8uYQdFxhI0/edit?usp=sharing" target="_blank"><i class="fa fa-slideshare"></i></a>
-* Kaggle 連結 <a href="https://www.kaggle.com/t/98e81d1542fe47e092d3e102dfe42360" target="_blank"><i class="fa fa-trophy"></i></a>
-* 遲交表單 <a href="https://goo.gl/forms/y5KQA5Cq6Sn8Wuxg2" target="_blank"><i class="fa fa-file-text"></i></a>
-* 小老師申請表單 <a href="https://goo.gl/forms/vi8RbHKATZNkwHS42" target="_blank"><i class="fa fa-file-text"></i></a>
-* report template <a href="https://goo.gl/vb6Baq" target="_blank"><i class="fa fa-file-text"></i></a>
+* 投影片連結 <a href="https://docs.google.com/presentation/d/10a1ET-9m3ntQhGesxCpQOqPtab4ldUBBrq-i3o-h2HE/edit?usp=sharing" target="_blank"><i class="fa fa-slideshare"></i></a>
+* Kaggle 連結 <a href="https://www.kaggle.com/c/ml2017-fall-hw5/" target="_blank"><i class="fa fa-trophy"></i></a>
+* Report 連結 <a href="https://ppt.cc/f3y0hx" target="_blank"><i class="fa fa-trophy"></i></a>
+* code遲交表單 <a href="https://ppt.cc/fi3bjx" target="_blank"><i class="fa fa-file-text"></i></a>
+* 小老師申請表單 <a href="https://ppt.cc/fmnDEx" target="_blank"><i class="fa fa-file-text"></i></a>
+* report template <a href="https://docs.google.com/document/d/1NPjmzp7_KGH988WWDvzVkGk5pbfxW-FL4Ridw2RmaRE/edit?usp=sharing" target="_blank"><i class="fa fa-file-text"></i></a>
   
-<hr>
-### <a href="./RNN_model.html" target="_blank">Sample code</a> 
+<!--<hr>
+### <a href="./RNN_model.html" target="_blank">Sample code</a>--> 
   
 <hr>
 ### Report
-#### P1: 請說明你實作的 RNN model，其模型架構、訓練過程和準確率為何？ (1%)
-* 作業要求: 請將你的model 架構(summery)、訓練細節(ex. epoch、optimizer、loss fuction...)與準確率附上。
+#### P1: 請比較有無normalize(在rating上)的差別。並說明如何normalize. (1%)
+* 作業要求: 請說明你如何normalize，以及附上normalize前後的準確率比較。
   
-#### P2: 請說明你實作的 BOW model，其模型架構、訓練過程和準確率為何？(1%)
-* 作業要求: 同上。
+#### P2: 比較不同的latent dimension的結果(1%)
+* 作業要求: 請附上不同latent dimension的實驗數據。
   
-#### P3: 請比較bag of word與RNN兩種不同model對於"today is a good day, but it is hot"與"today is hot, but it is a good day"這兩句的情緒分數，並討論造成差異的原因。(1%)
-* 作業要求: 請附上兩個model對這兩句的prediction(不是label), 並討論原因。
+#### P3: 比較有無bias的結果。(1%)
+* 作業要求: 請附上有無bias的實驗數據。
   
-#### P4: 請比較"有無"包含標點符號兩種不同tokenize的方式，並討論兩者對準確率的影響。(1%)
-* 作業要求: 請附上在RNN model上, 兩種不同tokenize方式的準確率, 並討論原因。
+#### P4: 請試著用DNN(投影片p.28)來解決這個問題，並且說明實做的方法(方法不限)。並比較MF和NN的結果，討論結果的差異。(1%)
+* 作業要求: 說明實做DNN的方法,並且附上不同參數以及架構的實驗數據,並簡單分析原因。
   
-#### P5: 請描述在你的semi-supervised方法是如何標記label，並比較有無semi-surpervised training對準確率的影響。(1%)
-* 作業要求: 請說明如何標記unlabel data的label, 附上兩者在RNN model 上的準確率, 並討論原因。
+#### P5: 請試著將movie的embedding用tsne降維後，將movie category當作label來作圖(如投影片p.29)。(1%)
+* 作業要求: 請畫出降維後的圖即可。
+
+#### BONUS: 試著使用除了rating以外的feature, 並說明你的作法和結果，結果好壞不會影響評分。(1%)
+* 作業要求: 請說明你如何使用這些方法，以及其實驗數據。
   
 <hr>
 ### Rules
@@ -54,7 +58,6 @@
   + tensorflow 1.3
   + keras 2.0.8
   + pytorch 0.2.0
-  + gensim, GloVe
   + Numpy, Pandas 0.20+, Python Standard Lib...
 
 </xmp>
